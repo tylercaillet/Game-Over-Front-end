@@ -13,7 +13,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
                 </span>
                 <div id='nav-content'>
                     <NavLink to ={`/`}>
-                        <img src="/images/Find_A_Pet-logo2.png" alt="website logo" className='logo'/>
+                        <p> alt="website logo" className='logo'</p>
                     </NavLink>
                 <nav className="nav-text" id='menu_box'>
                     <NavLink to='/' className='nav-link'>Home</NavLink>

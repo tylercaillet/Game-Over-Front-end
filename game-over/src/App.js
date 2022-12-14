@@ -6,8 +6,6 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
-import axios from 'axios'
-import { BASE_URL } from './globals'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)

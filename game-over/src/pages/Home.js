@@ -24,12 +24,12 @@ const Home = ({ user, authenticated }) => {
       </header>
       <h2 id="games">List of Video Games</h2>
       <div className="gallery">
-        <img src="./images/frenchie-pic.png" alt="frenchie" />
+        {/* <img src="./images/frenchie-pic.png" alt="frenchie" />
         <img src="./images/dogs-reunited.png" alt="dogs-reunited" />
         <img src="./images/dogs-reunited2.png" alt="dogs-reunited2" />
         <img src="./images/dogs-on-fence.png" alt="dogs-on-fence" />
         <img src="./images/cat-photo.png" alt="cat-photo" />
-        <img src="./images/two-pitbulls.png" alt="pitbulls-photo" />
+        <img src="./images/two-pitbulls.png" alt="pitbulls-photo" /> */}
       </div>
     </div>
   ) : (
