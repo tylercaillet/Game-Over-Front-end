@@ -27,3 +27,59 @@ export const CheckSession = async () => {
     throw error
   }
 }
+
+export const CreateReview = async (data) => {
+  try {
+    const res = await Client.post(
+      `/reviews/new_reviews/user/${data.userId}/game/${data.gamesId}`,
+      data
+    )
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const UpdateReview = async (data) => {
+  try {
+    const res = await Client.put(`/reviews/${data.id}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const DestroyReview = async (data) => {
+  try {
+    const res = await Client.delete(`/reviews/${data.id}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const CreateVideoGame = async (data) => {
+  try {
+    const res = await Client.post(`/games/new_game`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+export const UpdateVideoGame = async (data) => {
+  try {
+    const res = await Client.put(`/games/${data.id}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const DestroyVideoGame = async (data) => {
+  try {
+    const res = await Client.delete(`/games/${data.id}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}

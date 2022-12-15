@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
+import VideoGameCard from './pages/VideoGameCard'
+import VideoGameDetails from './components/VideoCardDetails'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -55,6 +57,8 @@ function App() {
                 />
               }
             />
+            <Route path="/games" element={<VideoGameCard />} />
+            <Route path="/games/:id" element={<VideoGameDetails />} />
           </Routes>
         </main>
       </div>

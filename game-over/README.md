@@ -4,7 +4,7 @@
 
 ### Date: Dec 07, 2022
 
-### [GitHub - Backend](https://github.com/tylercaillet/Game-Over-Back-end) | [Trello Board](https://trello.com/b/naXdDCjY/game-over-p4) | [Heroku App](TBD)
+### [GitHub - Backend](https://github.com/tylercaillet/Game-Over-Front-end) | [Trello Board](https://trello.com/b/naXdDCjY/game-over-p4) | [Heroku App](TBD)
 
 ---
 

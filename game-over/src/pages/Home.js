@@ -22,7 +22,7 @@ const Home = ({ user, authenticated }) => {
           Read More
         </button>
       </header>
-      <h2 id="games">List of Video Games</h2>
+      {/* <h2 id="games">List of Video Games</h2> */}
       <div className="gallery">
         {/* <img src="./images/frenchie-pic.png" alt="frenchie" />
         <img src="./images/dogs-reunited.png" alt="dogs-reunited" />

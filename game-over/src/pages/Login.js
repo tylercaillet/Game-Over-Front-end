@@ -1,57 +1,67 @@
+import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { LoginUser } from '../services/Auth'
 
 const Login = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
-  const [formValues, setFormValues] = useState({ email: '', password: '' })
+  const [formValues, setFormValues] = useState({ userName: '', password: '' })
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await LoginUser(formValues)
-    setFormValues({ email: '', password: '' })
+    setFormValues({ userName: '', password: '' })
     setUser(payload)
     toggleAuthenticated(true)
     navigate('/')
   }
-
   return (
-    <div className="signin col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <label className="label" htmlFor="email">
-            Email
-          </label>
+    <body className="login-box">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="user-box">
+          <label htmlFor="userName">Username</label>
           <input
-            className="input"
             onChange={handleChange}
-            name="email"
-            type="email"
-            placeholder="example@example.com"
-            value={formValues.email}
+            name="userName"
+            type="userName"
+            placeholder="username"
+            value={formValues.userName}
+            className="input"
             required
           />
-          <label className="label" htmlFor="password">
-            Password
-          </label>
+        </div>
+        <div className="user-box">
+          <label htmlFor="password">Password</label>
           <input
-            className="input"
             onChange={handleChange}
             type="password"
             name="password"
+            placeholder="password"
             value={formValues.password}
+            className="input"
             required
           />
-          <button disabled={!formValues.email || !formValues.password}>
-            Sign In
+        </div>
+        <div className="button-form">
+          <button
+            disabled={!formValues.userName || !formValues.password}
+            id="submit"
+          >
+            Submit
           </button>
-        </form>
-      </div>
-    </div>
+          <div id="register">
+            <h3>Haven't made an account yet? &nbsp;</h3>
+            <Link to="/register" id="register-link">
+              <h3>Register Here</h3>
+            </Link>
+          </div>
+        </div>
+      </form>
+    </body>
   )
 }
 
