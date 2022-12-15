@@ -8,6 +8,7 @@ import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
 import VideoGameCard from './pages/VideoGameCard'
 import VideoGameDetails from './components/VideoCardDetails'
+import About from './pages/About'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -47,6 +48,7 @@ function App() {
               index
               element={<Home user={user} authenticated={authenticated} />}
             />
+            <Route path="/about" element={<About />} />
             <Route path="/register" element={<Register />} />
             <Route
               path="/login"
