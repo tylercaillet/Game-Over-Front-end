@@ -48,7 +48,7 @@ function App() {
               index
               element={<Home user={user} authenticated={authenticated} />}
             />
-            <Route path="/about" element={<About />} />
+            <Route path="/about_us" element={<About />} />
             <Route path="/register" element={<Register />} />
             <Route
               path="/login"

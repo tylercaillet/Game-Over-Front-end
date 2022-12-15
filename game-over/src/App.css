@@ -41,3 +41,8 @@ img {
   height: 40vh;
   width: 40vw;
 }
+
+.about-blurb {
+  font-weight: bolder;
+  font-style: oblique;
+}
