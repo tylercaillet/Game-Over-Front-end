@@ -8,6 +8,7 @@ import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
 import VideoGameCard from './pages/VideoGameCard'
 import VideoGameDetails from './components/VideoCardDetails'
+import EditReviewForm from './pages/EditReviewForm'
 import About from './pages/About'
 
 function App() {
@@ -61,6 +62,12 @@ function App() {
             />
             <Route path="/games" element={<VideoGameCard />} />
             <Route path="/games/:id" element={<VideoGameDetails />} />
+            <Route
+              path="/edit_review/user/:userId/games/:gamesId/review/:reviewId"
+              element={
+                <EditReviewForm user={user} authenticated={authenticated} />
+              }
+            />
           </Routes>
         </main>
       </div>
